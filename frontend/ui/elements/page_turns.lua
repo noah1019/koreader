@@ -128,7 +128,7 @@ local PageTurns = {
                 ReaderUI.instance.view:onToggleReadingOrder()
             end,
             hold_callback = function(touchmenu_instance)
-                local inverse_reading_order = G_reader_settings:isTrue("inverse_reading_order")
+                local inverse_reading_order = G_reader_settings:isTrue("inverse_reading_order") --important
                 local MultiConfirmBox = require("ui/widget/multiconfirmbox")
                 UIManager:show(MultiConfirmBox:new{
                     text = inverse_reading_order and _("The default (★) for newly opened books is right-to-left (RTL) page turning.\n\nWould you like to change it?")
